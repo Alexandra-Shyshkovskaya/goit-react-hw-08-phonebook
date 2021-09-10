@@ -19,39 +19,37 @@ class App extends Component {
   }
   render() {
     return (
-      <>
-        <Container>
-          <AppBar />
-          <Suspense fallback={<Backdrop />}>
-            <Switch>
-              <PublicRoute exact path="/" component={HomeView} />
-              <PublicRoute
-                path="/login"
-                restricted
-                redirectTo="/contacts"
-                component={LoginView}
-              />
-              <PrivateRoute
-                path="/contacts"
-                redirectTo="/login"
-                component={ContactsView}
-              />
-            </Switch>
-          </Suspense>
-          {/* <h1>Phonebook</h1>
-          <ContactForm />
-          <h2>Contacts</h2>
-          <Filter />
-           {this.props.isLoadingContacts && <h1>Loading...</h1>}
- */}         {/*  <ContactList /> */}
-        </Container>
-      </>
+      <Container>
+        <AppBar />
+        <Suspense fallback={<Backdrop />}>
+          <Switch>
+            <PublicRoute exact path="/" component={HomeView} />
+            <PublicRoute
+              path="/register"
+              restricted
+              redirectTo="/contacts"
+              component={RegisterView}
+            />
+            <PublicRoute
+              path="/login"
+              restricted
+              redirectTo="/contacts"
+              component={LoginView}
+            />
+            <PrivateRoute
+              path="/contacts"
+              redirectTo="/login"
+              component={ContactsView}
+            />
+          </Switch>
+        </Suspense>
+      </Container>
     );
   }
 }
 
 const mapDispatchToProps = {
-  onGetCurrentUser: authOperations.onGetCurrentUser,
+  onGetCurrentUser: authOperations.getCurrentUser,
 };
 
 export default connect(null, mapDispatchToProps)(App);

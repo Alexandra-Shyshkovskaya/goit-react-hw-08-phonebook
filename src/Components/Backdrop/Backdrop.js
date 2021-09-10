@@ -11,7 +11,7 @@ export default class Backdrop extends Component {
     return createPortal(
       <div className={style.backdrop}>
         <Loader
-          type="Circles"
+          type="Rings"
           color="#00BFFF"
           height={100}
           width={100}

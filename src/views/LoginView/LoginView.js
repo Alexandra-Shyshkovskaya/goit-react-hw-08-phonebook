@@ -26,34 +26,34 @@ class LoginView extends Component {
 
     return (
       <div>
-        <h1>Страница логина</h1>
-
         <form
           onSubmit={this.handleSubmit}
           className={style.form}
           autoComplete="off"
         >
           <label className={style.label}>
-            Почта
+            E-mail
             <input
               type="email"
               name="email"
               value={email}
+              className={style.input}
               onChange={this.handleChange}
             />
           </label>
 
           <label className={style.label}>
-            Пароль
+            Password
             <input
               type="password"
               name="password"
               value={password}
+              className={style.input}
               onChange={this.handleChange}
             />
           </label>
 
-          <button type="submit">Войти</button>
+          <button type="submit" className={style.button}>Log in</button>
         </form>
       </div>
     );

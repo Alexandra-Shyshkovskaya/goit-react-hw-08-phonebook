@@ -1,14 +1,6 @@
-.container {
-  max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
 .title,
 .caption {
   font-style: normal;
-
   text-align: center;
   color: #000;
 }

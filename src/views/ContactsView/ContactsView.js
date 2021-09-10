@@ -14,14 +14,14 @@ class ContactsView extends Component {
 
   render() {
     return (
-      <div className={style.container}>
+      <>
         <h1 className={style.title}>Phonebook</h1>
         <ContactForm />
         <h2 className={style.caption}>Contacts</h2>
         <Filter />
         {this.props.isLoadingContacts && <h1>Loading...</h1>}
         <ContactList />
-      </div>
+      </>
     );
   }
 }

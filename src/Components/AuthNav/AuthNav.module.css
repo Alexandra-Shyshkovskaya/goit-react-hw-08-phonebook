@@ -1,13 +1,13 @@
-.conteiner {
+.container {
   margin-left: auto;
 }
 .link {
   display: inline-block;
   text-decoration: none;
-  padding: 12px;
+  padding: 15px;
   font-weight: 700;
-  color: #2a363b;
+  color: #3b3db6;
 }
 .activeLink {
-  color: #e84a5f;
+  color: #e45366;
 }
